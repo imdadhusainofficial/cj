@@ -247,7 +247,7 @@ header {
 /* ========== Rating ========== */
 .rating-main {
     position: absolute;
-    bottom: 120px;
+    bottom: 115px;
     left: 5px;
     font-size: 12px;
     background-color: hsla(0, 0%, 100%, 0.8);
@@ -257,6 +257,14 @@ header {
     word-spacing: 1px;
     transition: opacity 0.3s ease;
 }
+
+@media screen and (max-width: 768px) {
+   .rating-main{
+  
+    bottom: 125px;
+}
+
+
 
 .star-count {
     font-size: 12px;
@@ -1239,3 +1247,4 @@ footer {
     }
 
 }
+
