@@ -247,7 +247,7 @@ header {
 /* ========== Rating ========== */
 .rating-main {
     position: absolute;
-    bottom: 115px;
+    bottom: 120px;
     left: 5px;
     font-size: 12px;
     background-color: hsla(0, 0%, 100%, 0.8);
@@ -1237,4 +1237,5 @@ footer {
         color: #ffd700;
         text-shadow: 3px 3px 0 #000;
     }
+
 }
