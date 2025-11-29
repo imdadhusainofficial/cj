@@ -5,15 +5,17 @@
     line-height: 18px;
     padding: 0 6px;
     height: 18px;
-    position: relative;
+    position: absolute;
     border-radius: 50%;
     font-size: 12px;
     color: #fff;
-    left: 13px;
-    top: -44px;
+    right: -8px;
+    top: -8px;
     font-weight: 700;
     cursor: pointer;
     display: none;
+    z-index: 100;
+    min-width: 18px;
 }
 
 *,
@@ -127,6 +129,7 @@ header {
     text-decoration: none;
     color: #CD9900;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 .action_container:hover {
@@ -257,14 +260,6 @@ header {
     word-spacing: 1px;
     transition: opacity 0.3s ease;
 }
-
-@media screen and (max-width: 768px) {
-   .rating-main{
-  
-    bottom: 125px;
-}
-
-
 
 .star-count {
     font-size: 12px;
@@ -536,6 +531,22 @@ header {
         min-width: auto;
     }
     
+    /* Bag Items Mobile Fix */
+    .bag-items {
+        right: -5px;
+        top: -5px;
+        font-size: 10px;
+        line-height: 16px;
+        height: 16px;
+        min-width: 16px;
+        padding: 0 4px;
+    }
+    
+    .action_container {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
     /* Main Content Mobile Styles */
     .main-container {
         width: 95%;
@@ -563,6 +574,29 @@ header {
         font-size: 10px;
         padding: 2px 5px;
     }
+
+ @media screen and (max-width: 768px) {
+
+     .rating-main {
+        bottom: 117px;
+        left: 5px;
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+    
+  } 
+
+  @media screen and (max-width: 360px) {
+
+     .rating-main {
+        bottom: 125px;
+        left: 5px;
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+    
+  } 
+    
     
     .indicater {
         top: 160px;
@@ -604,6 +638,17 @@ header {
         font-size: 13px;
     }
     
+    /* Bag Items Small Mobile Fix */
+    .bag-items {
+        right: -3px;
+        top: -3px;
+        font-size: 9px;
+        line-height: 14px;
+        height: 14px;
+        min-width: 14px;
+        padding: 0 3px;
+    }
+    
     .main-container {
         width: 98%;
         max-width: 400px;
@@ -634,10 +679,35 @@ header {
     }
 }
 
+/* ========== HIGH DPI/RETINA DISPLAY SUPPORT ========== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .bag-items {
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
 
+/* ========== ACCESSIBILITY IMPROVEMENTS ========== */
+@media (prefers-reduced-motion: reduce) {
+    .bag-items {
+        transition: none;
+    }
+    
+    .item-container,
+    .nav_bar a,
+    .action_container {
+        transition: none;
+    }
+}
 
-
-
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .bag-items {
+        background-color: #ff0000;
+        border: 1px solid #000000;
+    }
+}
 
 /* ========== FOOTER STYLES ========== */
 footer {
@@ -881,12 +951,7 @@ footer {
 
 
 
-
-
-
-
-/* ========== LUXURY BANNER STYLES ========== */
-/* ========== LUXURY BANNER STYLES ========== */
+/* ========== LUXURY BANNER STYLES - FIXED ========== */
 .luxury-banner {
     width: 100%;
     height: 400px;
@@ -933,12 +998,12 @@ footer {
     animation: lightSweep 6s ease-in-out infinite;
 }
 
-/* Top Left CJ Logo - Larger */
+/* Top Left CJ Logo - FIXED POSITION */
 .cj-logo-top-left {
     position: absolute;
-    top: 30px;
-    left: 40px;
-    font-size: 10rem;
+    top: 20px;
+    left: 30px;
+    font-size: 6rem; /* Reduced from 10rem */
     font-weight: 900;
     color: transparent;
     background: linear-gradient(45deg, #ffd700, #daa520, #ffec8b, #ffd700);
@@ -946,37 +1011,38 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 
-        6px 6px 0px rgba(0, 0, 0, 0.3),
-        12px 12px 0px rgba(0, 0, 0, 0.2),
-        18px 18px 0px rgba(0, 0, 0, 0.1);
+        4px 4px 0px rgba(0, 0, 0, 0.3),
+        8px 8px 0px rgba(0, 0, 0, 0.2);
     animation: 
         shine 3s ease-in-out infinite,
         gradientShift 4s ease-in-out infinite;
     z-index: 2;
     font-family: 'Playfair Display', serif;
-    letter-spacing: 5px;
-    opacity: 0.7;
+    letter-spacing: 3px;
+    opacity: 0.6; /* Reduced opacity */
 }
 
 .cj-logo-top-left::after {
     content: 'CJ';
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: 2px;
+    left: 2px;
     background: linear-gradient(45deg, #1a1a1a, #2d1b69);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     z-index: -1;
-    filter: blur(1.5px);
+    filter: blur(1px);
 }
 
-/* Banner Content */
+/* Banner Content - IMPROVED LAYOUT */
 .banner-content {
     text-align: center;
     position: relative;
     z-index: 3;
     padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .banner-title {
@@ -987,6 +1053,7 @@ footer {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 3px;
     font-family: 'Playfair Display', serif;
+    line-height: 1.2;
 }
 
 .banner-subtitle {
@@ -996,6 +1063,7 @@ footer {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
     font-weight: 300;
+    line-height: 1.4;
 }
 
 /* CTA Button */
@@ -1016,6 +1084,7 @@ footer {
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     position: relative;
     overflow: hidden;
+    z-index: 4;
 }
 
 .banner-cta::before {
@@ -1044,7 +1113,7 @@ footer {
     transform: translateY(-1px);
 }
 
-/* Decorative Shapes */
+/* Decorative Shapes - ADJUSTED POSITIONS */
 .banner-decoration {
     position: absolute;
     width: 100%;
@@ -1054,26 +1123,26 @@ footer {
 
 .diamond-shape {
     position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 60px;
-    height: 60px;
+    top: 15%;
+    left: 8%;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(45deg, #ffd700, transparent 70%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     animation: float 6s ease-in-out infinite;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .ring-shape {
     position: absolute;
-    top: 60%;
-    right: 15%;
-    width: 80px;
-    height: 80px;
-    border: 3px solid #ffd700;
+    top: 65%;
+    right: 12%;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #ffd700;
     border-radius: 50%;
     animation: float 8s ease-in-out infinite 1s;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .ring-shape::before {
@@ -1082,39 +1151,37 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    border: 2px solid #daa520;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #daa520;
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .gem-shape {
     position: absolute;
-    bottom: 20%;
-    left: 20%;
-    width: 40px;
-    height: 40px;
+    bottom: 25%;
+    left: 15%;
+    width: 35px;
+    height: 35px;
     background: linear-gradient(45deg, #daa520, #ffd700);
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     animation: float 7s ease-in-out infinite 2s;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 /* Animations */
 @keyframes shine {
     0%, 100% {
         text-shadow: 
-            4px 4px 0px rgba(0, 0, 0, 0.3),
-            8px 8px 0px rgba(0, 0, 0, 0.2),
-            12px 12px 0px rgba(0, 0, 0, 0.1);
+            3px 3px 0px rgba(0, 0, 0, 0.3),
+            6px 6px 0px rgba(0, 0, 0, 0.2);
     }
     50% {
         text-shadow: 
-            4px 4px 0px rgba(0, 0, 0, 0.3),
-            8px 8px 0px rgba(0, 0, 0, 0.2),
-            12px 12px 0px rgba(0, 0, 0, 0.1),
-            0 0 20px rgba(255, 215, 0, 0.5);
+            3px 3px 0px rgba(0, 0, 0, 0.3),
+            6px 6px 0px rgba(0, 0, 0, 0.2),
+            0 0 15px rgba(255, 215, 0, 0.4);
     }
 }
 
@@ -1150,19 +1217,19 @@ footer {
         transform: translateY(0) rotate(0deg);
     }
     50% {
-        transform: translateY(-20px) rotate(180deg);
+        transform: translateY(-15px) rotate(180deg);
     }
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-@media screen and (max-width: 768px) {
+/* ========== BANNER RESPONSIVE FIXES ========== */
+@media screen and (max-width: 1024px) {
     .luxury-banner {
         height: 350px;
     }
     
     .cj-logo-top-left {
-        font-size: 7rem;
-        top: 20px;
+        font-size: 5rem;
+        top: 15px;
         left: 20px;
     }
     
@@ -1173,42 +1240,35 @@ footer {
     .banner-subtitle {
         font-size: 1.1rem;
     }
-    
-    .diamond-shape {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .ring-shape {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .gem-shape {
-        width: 30px;
-        height: 30px;
-    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .luxury-banner {
         height: 300px;
     }
     
     .cj-logo-top-left {
-        font-size: 5rem;
-        top: 15px;
+        font-size: 3.5rem;
+        top: 10px;
         left: 15px;
+        opacity: 0.5;
+    }
+    
+    .banner-content {
+        max-width: 90%;
+        padding: 15px;
     }
     
     .banner-title {
         font-size: 2rem;
         letter-spacing: 2px;
+        margin: 5px 0;
     }
     
     .banner-subtitle {
         font-size: 1rem;
         letter-spacing: 1px;
+        margin-bottom: 20px;
     }
     
     .banner-cta {
@@ -1216,10 +1276,91 @@ footer {
         font-size: 1rem;
     }
     
+    .diamond-shape {
+        width: 35px;
+        height: 35px;
+        top: 12%;
+        left: 5%;
+    }
+    
+    .ring-shape {
+        width: 50px;
+        height: 50px;
+        top: 70%;
+        right: 8%;
+    }
+    
+    .ring-shape::before {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .gem-shape {
+        width: 25px;
+        height: 25px;
+        bottom: 20%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .luxury-banner {
+        height: 250px;
+    }
+    
+    .cj-logo-top-left {
+        font-size: 2.5rem;
+        top: 8px;
+        left: 10px;
+        opacity: 0.4;
+    }
+    
+    .banner-title {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+    
+    .banner-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .banner-cta {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    /* Hide decorative shapes on very small screens */
     .diamond-shape,
     .ring-shape,
     .gem-shape {
         display: none;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    .luxury-banner {
+        height: 220px;
+    }
+    
+    .cj-logo-top-left {
+        font-size: 2rem;
+        top: 5px;
+        left: 8px;
+    }
+    
+    .banner-title {
+        font-size: 1.4rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .banner-cta {
+        padding: 8px 20px;
+        font-size: 0.8rem;
     }
 }
 
@@ -1233,6 +1374,10 @@ footer {
     .gem-shape {
         animation: none;
     }
+    
+    .banner-cta:hover {
+        transform: none;
+    }
 }
 
 /* High Contrast Mode */
@@ -1243,8 +1388,6 @@ footer {
     
     .cj-logo-top-left {
         color: #ffd700;
-        text-shadow: 3px 3px 0 #000;
+        text-shadow: 2px 2px 0 #000;
     }
-
 }
-
