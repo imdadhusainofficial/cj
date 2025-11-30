@@ -81,7 +81,7 @@ const items = [
     company: 'Classic',
     item_name: 'The Aura Serenity Collection: Teal Focus Beads',
     original_price: 250,
-    current_price: 150,
+    current_price: 199,
     return_period: 14,
     delivery_date: '30 Oct 2025',
     rating: { stars: 2.1, count: 400 },
