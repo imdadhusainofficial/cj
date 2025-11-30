@@ -107,6 +107,8 @@ header {
   display: flex;
   min-width: 200px;
   justify-content: flex-end;
+  gap: 15px;
+  position: relative;
 }
 
 .action_container {
@@ -116,6 +118,8 @@ header {
   text-decoration: none;
   color: #CD9900;
   transition: color 0.3s ease;
+  position: relative;
+  padding: 5px 10px;
 }
 
 .action_container:hover {
@@ -136,6 +140,52 @@ header {
 
 .mobile-menu-btn:hover {
   color: #ff6b00;
+}
+
+/* ========== BAG ICON COUNT FIXES ========== */
+.bag-items {
+  background-color: #f16565;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 18px;
+  padding: 0 6px;
+  height: 18px;
+  position: absolute;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  right: 2px;
+  top: 2px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  min-width: 18px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Bag icon count display when has items */
+.bag-items:not(:empty) {
+  display: flex;
+}
+
+/* Ensure proper positioning for bag icon */
+.action_container[href*="bag"] {
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Ensure bag icon container has proper spacing */
+.action_bar > .action_container:last-child {
+  margin-right: 0;
 }
 
 /* ========== BACK BUTTON - FIXED ========== */
@@ -405,27 +455,6 @@ header {
   margin-bottom: 10px;
 }
 
-/* Cart Badge */
-.bag-items {
-  background-color: #f16565;
-  white-space: nowrap;
-  text-align: center;
-  line-height: 18px;
-  padding: 0 6px;
-  height: 18px;
-  position: absolute;
-  border-radius: 50%;
-  font-size: 12px;
-  color: #fff;
-  right: -8px;
-  top: -8px;
-  font-weight: 700;
-  cursor: pointer;
-  display: none;
-  z-index: 100;
-  min-width: 18px;
-}
-
 /* ========== FOOTER STYLES ========== */
 footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -658,6 +687,8 @@ footer {
     flex: 0 0 auto;
     margin-left: 10px;
     justify-content: flex-end;
+    min-width: auto;
+    gap: 10px;
   }
   
   .nav_bar {
@@ -690,6 +721,23 @@ footer {
     margin: 10px 0 0 0;
     min-width: auto;
     flex: 1 1 100%;
+  }
+  
+  /* Bag Icon Count Fix for Tablet */
+  .action_container {
+    font-size: 10px;
+    padding: 2px 5px;
+    position: relative;
+  }
+  
+  .bag-items {
+    right: -2px;
+    top: -2px;
+    height: 16px;
+    min-width: 16px;
+    line-height: 16px;
+    font-size: 10px;
+    border-width: 1px;
   }
   
   /* Back Button - FIXED POSITION */
@@ -797,11 +845,12 @@ footer {
   
   .action_bar {
     min-width: auto;
+    gap: 8px;
   }
   
   .action_container {
-    font-size: 10px;
-    padding: 2px;
+    font-size: 9px;
+    padding: 1px 3px;
   }
   
   .search_bar {
@@ -816,6 +865,17 @@ footer {
   
   .search_input {
     font-size: 12px;
+  }
+  
+  /* Bag Icon Count Fix for Mobile */
+  .bag-items {
+    right: -1px;
+    top: -1px;
+    height: 14px;
+    min-width: 14px;
+    line-height: 14px;
+    font-size: 9px;
+    padding: 0 4px;
   }
   
   /* Back Button */
@@ -875,6 +935,26 @@ footer {
   
   .myntra_home {
     height: 30px;
+  }
+  
+  .action_bar {
+    gap: 5px;
+  }
+  
+  .action_container {
+    font-size: 8px;
+    padding: 1px 2px;
+  }
+  
+  /* Bag Icon Count Fix for Extra Small Devices */
+  .bag-items {
+    right: 0px;
+    top: 0px;
+    height: 12px;
+    min-width: 12px;
+    line-height: 12px;
+    font-size: 8px;
+    padding: 0 3px;
   }
   
   .buttons-main {
