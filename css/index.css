@@ -589,7 +589,7 @@ header {
   @media screen and (max-width: 356px) {
 
      .rating-main {
-        bottom: 137px;
+        bottom: 134px;
         left: 5px;
         font-size: 10px;
         padding: 2px 5px;
@@ -1391,6 +1391,7 @@ footer {
         text-shadow: 2px 2px 0 #000;
     }
 }
+
 
 
 
