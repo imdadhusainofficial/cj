@@ -109,7 +109,7 @@ const items = [
     company: 'Classic',
     item_name: 'Teal Serenity Bracelet',
     original_price: 650,
-    current_price: 400,
+    current_price: 450,
     return_period: 14,
     delivery_date: '30 Oct 2025',
     rating: { stars: 4.2, count: 5200 },
