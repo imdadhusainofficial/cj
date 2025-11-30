@@ -163,9 +163,8 @@ header {
   justify-content: center;
   z-index: 100;
   min-width: 18px;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  animation: fadeIn 0.3s ease-in-out;
+ 
+ 
 }
 
 /* Bag icon count display when has items */
@@ -1030,3 +1029,4 @@ footer {
     border-width: 0.5px;
   }
 }
+
