@@ -119,19 +119,35 @@ const items = [
       This beautiful teal bracelet is your daily reminder to take a deep breath. It's the perfect pop of color that effortlessly matches your style while keeping your peace close`,
   }),
 
-  //  createItem({
-  //   id: '009',
-  //   images: ['/images/9/9.png', '/images/9/9b.png','/images/9/9c.png'],
-  //   company: 'Classic',
-  //   item_name: 'Teal Serenity Bracelet',
-  //   original_price: 685,
-  //   current_price: 142,
-  //   return_period: 14,
-  //   delivery_date: '31 Oct 2025',
-  //   rating: { stars: 4.2, count: 5200 },
-  //   sizes: [4,7],
-  //   stock: 1,
-  //   description: `Good vibes only! 
-  //     This beautiful teal bracelet is your daily reminder to take a deep breath. It's the perfect pop of color that effortlessly matches your style while keeping your peace close`,
-  // })
+   createItem({
+    id: '009',
+    images: ['/images/9/9.jpeg', '/images/9/9b.jpeg','/images/9/9c.png'],
+    company: 'Classic',
+    item_name: 'Teal Serenity Bracelet',
+    original_price: 650,
+    current_price: 500,
+    return_period: 14,
+    delivery_date: '31 Oct 2025',
+    rating: { stars: 4.2, count: 5200 },
+  
+    stock: 1,
+    description: `Good vibes only! 
+      This beautiful teal bracelet is your daily reminder to take a deep breath. It's the perfect pop of color that effortlessly matches your style while keeping your peace close`,
+  }),
+
+   createItem({
+    id: '010',
+    images: ['/images/9/9.jpeg', '/images/9/9b.jpeg','/images/9/9c.png'],
+    company: 'Classic',
+    item_name: 'Teal Serenity Bracelet',
+    original_price: 650,
+    current_price: 500,
+    return_period: 14,
+    delivery_date: '31 Oct 2025',
+    rating: { stars: 4.2, count: 5200 },
+   
+    stock: 1,
+    description: `Good vibes only! 
+      This beautiful teal bracelet is your daily reminder to take a deep breath. It's the perfect pop of color that effortlessly matches your style while keeping your peace close`,
+  })
 ];
