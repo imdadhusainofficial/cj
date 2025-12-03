@@ -121,7 +121,7 @@ const items = [
 
    createItem({
     id: '009',
-    images: ['/images/9/9.jpeg', '/images/9/9b.jpeg','/images/9/9c.png'],
+    images: ['/images/9/9.jpeg', '/images/9/9b.jpeg',],
     company: 'Classic',
     item_name: 'Teal Serenity Bracelet',
     original_price: 650,
@@ -137,7 +137,7 @@ const items = [
 
    createItem({
     id: '010',
-    images: ['/images/9/9.jpeg', '/images/9/9b.jpeg','/images/9/9c.png'],
+    images: ['/images/10/10.jpeg', '/images/10/10b.jpeg',],
     company: 'Classic',
     item_name: 'Teal Serenity Bracelet',
     original_price: 650,
